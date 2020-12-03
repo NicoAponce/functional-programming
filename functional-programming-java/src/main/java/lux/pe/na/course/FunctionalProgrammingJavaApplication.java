@@ -16,5 +16,9 @@ public class FunctionalProgrammingJavaApplication implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
+        Greet greet = () -> {
+            System.out.println("hello world");
+        };
+        greet.hello();
     }
 }

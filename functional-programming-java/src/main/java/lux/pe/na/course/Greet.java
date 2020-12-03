@@ -1,0 +1,1 @@
+package lux.pe.na.course;@FunctionalInterfacepublic interface Greet {    void hello();}
