@@ -16,5 +16,22 @@ public class FunctionalProgrammingJavaApplication implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
+        List<Integer> numbers = List.of(1, 2, 3, 4, 5, 6, 7, 8, 9);
+
+        //TODO: Sum
+        int sum = numbers.stream().mapToInt(num -> num).sum();
+        System.out.println(sum);
+
+        //TODO: Average
+        double average = numbers.stream().mapToInt(num -> num).average().orElse(0);
+        System.out.println(average);
+
+        //TODO: Min
+        int min = numbers.stream().mapToInt(num -> num).min().getAsInt();
+        System.out.println(min);
+
+        //TODO: Max
+        int max = numbers.stream().mapToInt(num -> num).max().getAsInt();
+        System.out.println(max);
     }
 }
