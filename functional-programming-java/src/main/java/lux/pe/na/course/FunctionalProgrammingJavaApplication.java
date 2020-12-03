@@ -18,7 +18,9 @@ public class FunctionalProgrammingJavaApplication implements CommandLineRunner {
     public void run(String... args) throws Exception {
         List<Integer> numbers = List.of(1, 2, 3, 4, 5, 6, 7, 8, 9);
         numbers.stream()
-                .map(val -> val * val)
-                .forEach(val -> System.out.println(val));
+                .forEach(val -> {
+                    int result = val * val;
+                    System.out.println(result);
+                });
     }
 }
