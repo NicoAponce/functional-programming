@@ -18,13 +18,14 @@ public class FunctionalProgrammingJavaApplication implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
 
-        List<Integer> list = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9);
+        List<Integer> list = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9,10);
+
+        Calculator calculator = new Calculator();
+
         list.stream()
-                .map(FunctionalProgrammingJavaApplication::toCube)
+                .map(calculator::toCube)
                 .forEach(System.out::println);
     }
 
-    public static int toCube(int num) {
-        return num * num * num;
-    }
+
 }
