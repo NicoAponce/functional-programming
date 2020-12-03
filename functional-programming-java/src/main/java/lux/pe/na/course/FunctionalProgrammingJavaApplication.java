@@ -26,9 +26,7 @@ public class FunctionalProgrammingJavaApplication implements CommandLineRunner {
         users.add(new User("maria", 20));
         users.add(new User("maria", 20));
         users.add(new User("maria", 20));
-
-
-        List<User> data = users.stream().filter(user -> user.getAge() > 18).collect(Collectors.toList());
-        System.out.println(data);
+        
+        users.stream().map(User::getUsername).forEach(System.out::println);
     }
 }
