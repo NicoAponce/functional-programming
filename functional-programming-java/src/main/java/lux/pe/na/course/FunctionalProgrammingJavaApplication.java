@@ -6,6 +6,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @SpringBootApplication
 public class FunctionalProgrammingJavaApplication implements CommandLineRunner {
@@ -26,18 +27,8 @@ public class FunctionalProgrammingJavaApplication implements CommandLineRunner {
         users.add(new User("maria", 20));
         users.add(new User("maria", 20));
 
-        //TODO: Imperative
-        int count = 0;
-        for (User user : users) {
-            if (user.getAge() > 18) {
-                count++;
-            }
-        }
-        System.out.println("users over 18 years old are " + count);
 
-
-        //TODO: Declarative
-        count= (int) users.stream().filter(user -> user.getAge()>18).count();
-        System.out.println(count);
+        List<User> data = users.stream().filter(user -> user.getAge() > 18).collect(Collectors.toList());
+        System.out.println(data);
     }
 }
