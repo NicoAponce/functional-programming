@@ -1,0 +1,1 @@
+package lux.pe.na.course;@FunctionalInterfacepublic interface IData {    Integer sum(int n1, int n2);}
