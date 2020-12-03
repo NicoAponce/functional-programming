@@ -20,5 +20,15 @@ public class FunctionalProgrammingJavaApplication implements CommandLineRunner {
             System.out.println("this is not  " + message);
         };
         greet.hello("a  simulacrum");
+
+        Greet greetTwo = message -> {
+            if (message.equals("world")) {
+                System.out.println("this is a classic message, Hello World");
+            } else {
+                System.out.println("the message is " + message);
+            }
+        };
+        greetTwo.hello("world");
+
     }
 }
