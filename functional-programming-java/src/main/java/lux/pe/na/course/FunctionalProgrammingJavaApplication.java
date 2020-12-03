@@ -26,7 +26,7 @@ public class FunctionalProgrammingJavaApplication implements CommandLineRunner {
         users.add(new User("maria", 20));
         users.add(new User("maria", 20));
         users.add(new User("maria", 20));
-        
+
         users.stream().map(User::getUsername).forEach(System.out::println);
     }
 }
